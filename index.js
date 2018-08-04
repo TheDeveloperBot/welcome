@@ -21,7 +21,7 @@ client.on("voiceStateUpdate", (oldMember, newMember) => {
     if (oldUserChannel === undefined && newUserChannel !== undefined) {
         if (newMember.user.username.toLowerCase() === `${newMember.user.username}`) {
             newUserChannel.join().then(connection => {
-                const dispatcher = connection.playFile('./cena.mp3');
+                const dispatcher = connection.playFile('./join.mp3');
 
                 dispatcher.setVolume(0.75);
                 dispatcher.on('end', () => {
